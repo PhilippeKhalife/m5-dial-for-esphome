@@ -34,9 +34,10 @@ namespace esphome
 
 					int data_count = 1 + (brightness >= 0 ? 1 : 0);
 					resp.data.init(data_count);
+					
 					auto &kv1 = resp.data.emplace_back();
                     
-                    kv1.set_key(esphome::StringRef("entity_id"));
+					kv1.set_key(esphome::StringRef("entity_id"));
                     kv1.value = entity;
 
                     if(brightness >= 0){
