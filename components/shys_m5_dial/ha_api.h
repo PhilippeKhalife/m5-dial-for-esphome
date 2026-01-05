@@ -206,7 +206,7 @@ namespace esphome
 
                 void setCoverPosition(const std::string& entity, int value){
                     esphome::api::HomeassistantActionRequest resp;
-                    resp.set_service(esphome::StringRef("cover.set_cover_position"));
+                    resp.set_service(esphome::StringRef("cover.set_cover_tilt_position"));
                     resp.data.init(1);
                     auto &kv1 = resp.data.emplace_back();
                     kv1.set_key(esphome::StringRef("entity_id"));
